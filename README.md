@@ -15,7 +15,7 @@
 - **後臺控制-使用者管理頁面 (animember.html)**：管理使用者資訊及角色。
 ---
 ### 首頁（理念介紹與影音推薦）
-![首頁截圖]([images/首頁.png](https://github.com/planet2223/animal/blob/main/imgs/%E9%A6%96%E9%A0%81.png))
+![首頁截圖](imgs/首頁.png)
 
 ---
 
