@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400&display=swap" rel="stylesheet">
+    <title>我的個人首頁</title>
+</head>
+<body>
+    <style>
+         body {
+            font-family: "Zen Maru Gothic", serif;
+        }
+        .section01{
+            height:100vh;
+            background-color: rgba(168, 204, 245, 0.6);
+            position:relative;
+        }
+        .box01{
+            width: 100px;
+            height: 100px;
+            background-color: rgba(0, 0, 0, 0.1);
+            position:absolute;
+            top:0;
+            left:0;
+        }
+        .box02{
+            width: 100px;
+            height: 100px;
+            background-color: rgba(0, 0, 0, 0.1);
+            position:absolute;
+            top:0;
+            right:0;
+        }
+        .box03{
+            width: 100px;
+            height: 100px;
+            background-color: rgba(0, 0, 0, 0.1);
+            position:absolute;
+            left:0;
+            bottom:0;
+        }
+        .box04{
+            width: 100px;
+            height: 100px;
+            background-color: rgba(0, 0, 0, 0.1);
+            position:absolute;
+            right:0;
+            bottom:0;
+        }
+        .userimg{
+            position:absolute;
+            top: 20px;
+            bottom: 20px;
+            right: 20px;
+            left: 20px;
+            background-color: aliceblue;
+            background-image: url(web202411/imgs/050.jpg);
+            background-position: center center;
+            background-size: cover;
+            /* background-repeat: no repeat;
+            background-size: contain; */
+        }
+        .usertext{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            background-color:rgba(245, 217, 217, 0.3);
+            padding: 15px;
+        }
+        .usertext h1{
+            color:rgb(7, 27, 27);
+            text-align:center;
+            font-size: 48px;
+        }
+        .usertext h2{
+            color:rgb(52, 49, 77);
+            text-align: center;
+        }
+        .usertext p{
+            color:rgb(40, 29, 54);
+            text-align:center;
+            font-size: 20px;
+        }
+        .section02 {
+            position: relative;
+            background-color: aliceblue;
+            height: 600px;
+            display: flex;
+            flex-wrap: wrap; /* 讓子元素能換行 */
+             /*justify-content: space-around; 水平分布 */
+            align-items: center; /* 垂直置中 */
+        }
+        .section03 {
+            position: relative;
+            background-color: rgb(204, 206, 204);
+            height: 600px;
+            display: flex;
+            flex-wrap: wrap; /* 讓子元素能換行 */
+            /*justify-content: space-around;  水平分布 */
+           /*align-items: center;  垂直置中 */
+        }
+        .section02 .box_02_1,
+        .section02 .box_02_2,
+        .section02 .box_02_3,
+        .section02 .box_02_4,
+        .section02 .box_02_5,
+        .section02 .box_02_6,
+        .section02 .box_02_7,
+        .section02 .box_02_8,
+        .section02 .box_02_9,
+        .section02 .box_02_10
+        {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(112, 119, 101);
+            background-image: url('web202411/imgs/048.jpg'); /* 替換成你的圖片路徑 */
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            margin: 15px;
+            text-align: center;
+            line-height: 170px;
+            position: relative; /* 確保在 hover 時能夠正常顯示效果 */
+            z-index: 1; /* 確保它位於其他元素上層 */
+        }
+        .section03 .box_03_1,
+        .section03 .box_03_2 {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(53, 42, 8);
+            background-image: url('web202411/imgs/020.jpg'); /* 替換成你的圖片路徑 */
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            margin: 15px;
+            text-align: center;
+            line-height: 170px;
+        }
+        .section02 .box_02_1 a,
+        .section02 .box_02_2 a,
+        .section02 .box_02_3 a,
+        .section02 .box_02_4 a,
+        .section02 .box_02_5 a,
+        .section02 .box_02_6 a,
+        .section02 .box_02_7 a,
+        .section02 .box_02_8 a,
+        .section02 .box_02_9 a,
+        .section02 .box_02_10 a {
+            text-decoration: none;
+            color: aliceblue;
+        }
+        .section03 .box_03_1 a,
+        .section03 .box_03_2 a {
+            text-decoration: none;
+            color:rgb(204, 206, 204);
+        }
+        .section02 .box_02_1:hover,
+        .section02 .box_02_2:hover,
+        .section02 .box_02_3:hover,
+        .section02 .box_02_4:hover,
+        .section02 .box_02_5:hover,
+        .section02 .box_02_6:hover,
+        .section02 .box_02_7:hover,
+        .section02 .box_02_8:hover,
+        .section02 .box_02_9:hover,
+        .section02 .box_02_10:hover {
+            background-color: rgba(202, 142, 214, 0.6); /* 使用較高的透明度 */
+            z-index: 2; /* 確保 hover 效果能顯示在圖片上層 */
+        }
+        .section03 .box_03_1:hover,
+        .section03 .box_03_2:hover {
+            background-color: rgba(250, 192, 67, 0.3);
+        }
+        .section02 .box_02_1 a:hover,
+        .section02 .box_02_2 a:hover,
+        .section02 .box_02_3 a:hover,
+        .section02 .box_02_4 a:hover,
+        .section02 .box_02_5 a:hover,
+        .section02 .box_02_6 a:hover,
+        .section02 .box_02_7 a:hover,
+        .section02 .box_02_8 a:hover,
+        .section02 .box_02_9 a:hover,
+        .section02 .box_02_10 a:hover,
+        .section03 .box_03_1 a:hover,
+        .section03 .box_03_2 a:hover {
+            color: black; /* 改變文字顏色以提高可讀性 */
+        }
+    </style>
+</head>
+<body>
+    <div class="section01">
+        <div class="box01"></div>
+        <div class="box02"></div>
+        <div class="box03"></div>
+        <div class="box04"></div>
+        <div class="userimg"></div>
+        <div class="usertext">
+            <h1>上課作業/練習</h1>
+            <hr>
+            <h2>04</h2>
+            <p>陳芷柔</p>
+        </div>
+    </div>
+
+    <div class="section02">
+        <div class="box_02_1">
+            <h2><a href="/food">(FOOD)作品</a></h2>
+        </div>
+        <div class="box_02_2">
+            <h2><a href="/net2ftp">net2ftp</a></h2>
+        </div>
+        <div class="box_02_3">
+            <h2><a href="/phpMyAdmin">phpMyAdmin</a></h2>
+        </div>
+        <div class="box_02_4">
+            <h2><a href="/wp01/wordpress">Wordpress</a></h2>
+        </div>
+        <div class="box_02_5">
+            <h2><a href="/wp01/wordpress/wp-admin">Wordpress-Admin</a></h2>
+        </div>
+        <div class="box_02_6">
+            <h2><a href="/web202411">css/bootstrap練習</a></h2>
+        </div>
+        <div class="box_02_7">
+            <h2><a href="/web202411/1219-2.html"></a></h2>
+        </div>
+        <div class="box_02_8">
+            <h2><a href="/web202411/1219-2.html"></a></h2>
+        </div>
+        <div class="box_02_9">
+            <h2><a href="/web202411/1219-2.html"></a></h2>
+        </div>
+        <div class="box_02_10">
+            <h2><a href="/web202411/1219-2.html"></a></h2>
+        </div>
+    </div>
+
+    <div class="section03">
+        <div class="box_03_1">
+            <h2><a href="/web202411/1219-2.html">表單作業</a></h2>
+        </div>
+        <div class="box_03_2">
+            <h2><a href="/web202411/he.html">作業2</a></h2>
+        </div>
+    </div>
+</body>
+</html>
